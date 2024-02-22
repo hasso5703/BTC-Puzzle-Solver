@@ -8,6 +8,10 @@ body {
     padding-top: 50px;
     font-family: sans-serif;
     background-color: black;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,12 +50,41 @@ h1, h2, h3, h4, h5, h6 {
     font-size: small;
 }
 
-.app-dropdown {
+.app-dropdown, .nb_core, .method_solving {
     display: inline-block;
     width: 150px;
     padding-top: 10px;
 }
 
+
+
+
 .div-choix {
-    padding: 15px;
+    padding: 30px;
+    width: 33vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.speed-print{
+    color: white;
+}
+
+.button-submit {
+    padding: 10px 20px;
+    border: none;
+    background-color: #9b46ff;
+    color: white;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button-submit:hover {
+    padding: 10px 25px;
+    background-color: #7800ff;
+    color: white;
+    border-radius: 100px;
 }

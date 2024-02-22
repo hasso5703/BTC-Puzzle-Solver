@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 50px;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #9b46ff
+}
+
+.title {
+    color: #d2d2d2;
+}
+
+.app-header {
+    padding: 15px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.explication {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: small;
+}
+
+.app-dropdown {
+    display: inline-block;
+    width: 150px;
+    padding-top: 10px;
+}
+
+.div-choix {
+    padding: 15px;
+}

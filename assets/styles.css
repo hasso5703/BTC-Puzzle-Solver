@@ -61,11 +61,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .div-choix {
     padding: 30px;
-    width: 33vw;
+    width: 60vw;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    background-color: #a4a4a4;
+    margin-top: 15px;
 }
 
 .speed-print{

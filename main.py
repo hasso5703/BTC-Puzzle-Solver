@@ -6,14 +6,14 @@ from dash import Dash, Input, Output, State, html, dcc
 from constants_app import PUZZLES_LIST, DF, NB_THREAD
 import random
 
-application = Dash(__name__)
+server = Dash(__name__)
 
 hex_count = 0
 start_time = time.perf_counter()
 calculation_thread = None
 output_value = ""
 
-application.layout = html.Div([
+server.layout = html.Div([
     html.Div(
         className="app-header",
         children=[
@@ -119,7 +119,7 @@ def generate_output(start_range, end_range, target_address, output_file):
             output_value = f'[Scanned {formatted_hex_count} keys in {formatted_time}] [{formatted_kps} Keys/s.] [Current Hex: {display_key_hex}]'
 
 
-@application.callback(
+@server.callback(
     Output('progress-update', 'children'),
     Input('interval-component', 'n_intervals')
 )
@@ -127,7 +127,7 @@ def update_progress(n):
     return output_value
 
 
-@application.callback(
+@server.callback(
     Output('progress-output', 'children'),
     Input('dropdown', 'value'),
 )
@@ -147,7 +147,7 @@ def display_solution(numero_puzzle: int):
     ]
     return affichage
 
-@application.callback(
+@server.callback(
     Output('progress-update2', 'children'),
     Input('submit-button', 'n_clicks'),
     State('dropdown', 'value'),
@@ -171,4 +171,4 @@ def start_calculation(n_clicks, selected_puzzle):
 
 
 if __name__ == '__main__':
-    application.run_server(debug=True)
+    server.run_server(debug=True)
